@@ -7,12 +7,12 @@ export default class App extends React.Component {
     super();
     this.state = {
       data: [
-        { name: "Movie", header: true },
-        { name: "interstellar", header: false },
+        { name: "Movies", header: true },
+        { name: "Interstellar", header: false },
         { name: "Dark Knight", header: false },
         { name: "Pop", header: false },
-        { name: "Butter", header: false },
-        { name: "Tea", header: false },
+        { name: "Pulp Fiction", header: false },
+        { name: "Burning Train", header: false },
         { name: "Music", header: true },
         { name: "Adams", header: false },
         { name: "Nirvana", header: false },
@@ -23,20 +23,20 @@ export default class App extends React.Component {
         { name: "Jordan", header: false },
         { name: "Punjab", header: false },
         { name: "Ludhiana", header: false },
-        { name: "jsr", header: false },
-        { name: "india", header: false },
+        { name: "Jamshedpur", header: false },
+        { name: "India", header: false },
         { name: "People", header: true },
         { name: "Jazzy", header: false },
         { name: "Appie", header: false },
         { name: "Baby", header: false },
         { name: "Sunil", header: false },
         { name: "Arrow", header: false },
-        { name: "THings", header: true },
+        { name: "Things", header: true },
         { name: "table", header: false },
         { name: "chair", header: false },
         { name: "fan", header: false },
-        { name: "Cup", header: false },
-        { name: "Cube", header: false }
+        { name: "cup", header: false },
+        { name: "cube", header: false }
       ],
       stickyHeaderIndices: []
     };
@@ -56,12 +56,12 @@ export default class App extends React.Component {
   _renderItem = ({ item }) => {
     if (item.header) {
       return (
-        <ListItem
-          style={{ backgroundColor: "rgb(17, 124, 73)", marginLeft: 0 }}
-        >
+        <ListItem itemDivider>
           <Left />
-          <Body>
-            <Text style={{ fontWeight: "bold" }}>{item.name}</Text>
+          <Body style={{ marginRight: 40 }}>
+            <Text style={{ fontWeight: "bold" }}>
+              {item.name}
+            </Text>
           </Body>
           <Right />
         </ListItem>
